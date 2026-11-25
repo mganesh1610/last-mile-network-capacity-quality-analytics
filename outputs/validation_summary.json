@@ -1,0 +1,89 @@
+{
+  "total_raw_records_unified": 314627,
+  "raw_orders": 99441,
+  "raw_order_items": 112650,
+  "unique_depots_sellers": 3095,
+  "unique_destination_customers": 99441,
+  "promoted_delivered_shipments": 96281,
+  "quarantined_orders": 3160,
+  "dq_issue_breakdown": {
+    "non_delivered_status:invoiced": 314,
+    "non_delivered_status:shipped": 1107,
+    "non_delivered_status:processing": 301,
+    "non_delivered_status:unavailable": 609,
+    "non_delivered_status:canceled": 625,
+    "chronology_inversion": 188,
+    "missing_delivery_timestamp": 9,
+    "non_delivered_status:created": 5,
+    "non_delivered_status:approved": 2
+  },
+  "qualified_lanes_ge50_orders": 99,
+  "overall_late_rate_pct": 8.124,
+  "mean_handoff_days": 3.233,
+  "mean_last_mile_days": 9.335,
+  "same_state_late_rate_pct": 6.065,
+  "cross_state_late_rate_pct": 9.281,
+  "cross_vs_same_state_z": 17.528,
+  "cross_vs_same_state_p": 0.0,
+  "peak_load_late_rate_pct": 15.484,
+  "normal_load_late_rate_pct": 6.821,
+  "peak_vs_normal_z": 35.17,
+  "peak_vs_normal_p": 0.0,
+  "late_mean_transit_days": 25.685,
+  "ontime_mean_transit_days": 7.889,
+  "late_vs_ontime_welch_t": 88.292,
+  "walk_forward_weeks_evaluated": 65,
+  "naive_weekly_mape_pct": 16.473,
+  "walk_forward_mape_pct": 13.781,
+  "forecast_error_reduction_pct": 16.344,
+  "dq_gates_passed": 10,
+  "dq_gates_total": 10,
+  "dq_gates": [
+    {
+      "gate": "sha256_raw_source_verification",
+      "passed": true
+    },
+    {
+      "gate": "sqlite_integrity_check_ok",
+      "passed": true
+    },
+    {
+      "gate": "foreign_key_referential_integrity",
+      "passed": true
+    },
+    {
+      "gate": "order_row_conservation_100pct",
+      "passed": true
+    },
+    {
+      "gate": "chronology_non_negative_transit",
+      "passed": true
+    },
+    {
+      "gate": "zero_null_primary_foreign_keys",
+      "passed": true
+    },
+    {
+      "gate": "non_empty_quarantine_audit_log",
+      "passed": true
+    },
+    {
+      "gate": "lane_mart_minimum_support_threshold",
+      "passed": true
+    },
+    {
+      "gate": "walk_forward_leakage_free_horizon",
+      "passed": true
+    },
+    {
+      "gate": "forecast_beats_naive_baseline",
+      "passed": true
+    }
+  ],
+  "sha256_hashes": {
+    "orders": "8df58ef3d2d7e9944010f7beecd9b75367f5588ec6e3c91cec19ae3345ef9ecf",
+    "order_items": "4f6abdbbc94036d0df4a76fa0520c072e31a40119d70f7f370fba1e2285d2bcb",
+    "sellers": "31eb9bd50d684526a78f2389413ce61841e97692de7b828fe7d956b534586312",
+    "customers": "c26c17f59f3027a6a0dbeb8f1fa373c38f3323ecc84f225a8f4820e5bb288df8"
+  }
+}
